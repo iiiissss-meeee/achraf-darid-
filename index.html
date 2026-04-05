@@ -15,11 +15,16 @@
         <div class="navbar">
             <nav class="container">
                 <a href="#home" id="logo">achraf dared</a>
-                <ul>
+                <ul id="nav-menu">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </nav>
         </div>
         <div class="header-content">
@@ -36,7 +41,7 @@
                 <a href="#contact" class="btn-primary">Get In Touch</a>
             </div>
             <div class="content-image">
-                <img src="WIN_20260324_23_49_45_Pro.jpg" alt="Achraf Dared">
+                <img src="WIN_20260330_03_04_21_Pro.jpg" alt="Achraf Dared">
             </div>
         </div>
     </header>
@@ -86,6 +91,16 @@
             <p>&copy; 2024 Achraf Dared. All rights reserved</p>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
 
 </body>
 
