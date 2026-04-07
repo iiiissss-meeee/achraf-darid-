@@ -237,3 +237,22 @@ hr {
     padding-top: 100px;
     text-align: left; 
 }
+#contact {
+    padding: 100px 10%;
+    min-height: auto; 
+    background-color: #ecf0f3; 
+}
+
+footer {
+    background-color: #033b4a;  
+    color: #ffffff;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+    margin-top: 50px; 
+}
+
+footer p {
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
