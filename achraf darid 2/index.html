@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>achraf darid</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header id="home">
+        <div class="navbar">
+            <nav class="container">
+                <a href="#home" id="logo">achraf darid</a>
+                <ul id="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="./index.htm">Lessons</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+        <div class="header-content">
+            <div class="content-text">
+                <p class="title">Hello, I'm</p>
+                <h1>Achraf Darid</h1>
+                <p><span>Web Developer</span> passionate about creating amazing digital experiences</p>
+                <div class="social">
+                    <a href="https://www.instagram.com/achrafmath/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://wa.me/2126304434"><i class="fab fa-whatsapp"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-github"></i></a>
+                </div>
+                <a href="#contact" class="btn-primary">Get In Touch</a>
+            </div>
+            <div class="content-image">
+                <img src="WIN_20260330_03_04_21_Pro.jpg" alt="Achraf Dared">
+            </div>
+        </div>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <hr>
+            <div class="about-content">
+                <div class="col-1">
+                    <h3>Who I Am</h3>
+                    <p>An experienced educator committed to academic excellence in the field of Mathematics. I utilize
+                        modern teaching methodologies and digital tools to enhance the learning experience. Proven track
+                        record in helping students achieve top grades in national and international examinations.</p>
+                    <p>Beyond just solving equations, my goal is to foster critical thinking and logical reasoning in
+                        every student. I specialize in breaking down complex mathematical theories into
+                        easy-to-understand concepts, ensuring that every learner develops a strong foundation and a
+                        genuine confidence in their analytical skills.</p>
+                </div>
+                <div class="col-2">
+                    <p><strong>Name:</strong> Achraf Darid</p>
+                    <p><strong>Age:</strong> 25</p>
+                    <p><strong>Location:</strong> Morocco</p>
+                    <p><strong>Email:</strong> achrafmath26@gmail.com</p>
+                    <p><strong>Phone:</strong> +212 06-304434</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <hr>
+            <p>Feel free to reach out to me for any inquiries or collaborations.</p>
+            <form id="my-form" action="https://formspree.io/f/mbdpbjwq" method="POST">
+                <input type="text" name="name" placeholder="Your Name" required>
+                <input type="email" name="email" placeholder="Your Email" required>
+                <textarea name="message" placeholder="Your Message" required></textarea>
+
+                <button type="submit" class="btn-primary">Send Message</button>
+            </form>
+
+            <script src="javascript.js"></script>
+        </div>
+    </section>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2026 Achraf Darid. All rights reserved.</p>
+        <p>Designed by ilyass ahgannaj</p>
+    </div>
+</footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            hamburger.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+</html>
