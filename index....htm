@@ -4,103 +4,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>achraf MATH-VIP</title>
+    <title>Achraf MATH-VIP</title>
+
     <link rel="stylesheet" href="styles.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
 
-    <h1>Achraf MATH-VIP</h1>
-    <p>Welcome to my VIP section! Here, you will find exclusive, premium content designed for students who want to
-        elevate their mathematics skills. This section features advanced lessons, extra exercises, and expert tips to
-        help you achieve top results in your exams.</p>
-    <p>If you would like to join this section and access the exclusive content, please contact me via WhatsApp using the
-        following link:</p>
-    <section id="shop" class="shop-section">
-        <div class="container">
-            <h2 class="section-title">Regional Exams</h2>
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Achraf MATH-VIP</h1>
+        <p>Boost your math level with premium exams and solutions.</p>
 
-            <div class="products-grid">
+        <a href="https://wa.me/212786353269" class="main-btn">Join VIP Now</a>
+    </section>
 
-                <div class="product-card">
-                    <h1 class="minimal-vip-title">achraf MATH-VIP</h1>
-                    <div class="product-info">
-                        <h3>3rd Year Regional Exams</h3>
-                        <p class="description">A brief description of the product here...</p>
-                    </div>
-                    <div class="product-action">
-                        <span class="price">15 DH</span>
-                        <a href="https://wa.me/212786353269" class="shop-btn">Order via
-                            WhatsApp</a>
+    <!-- SECTION -->
+    <section class="shop-section">
+        <h2 class="section-title">Regional Exams</h2>
+
+        <div class="products-grid">
+
+            <div class="product-card">
+                <span class="badge">VIP</span>
+                <h3>3rd Year Regional Exams</h3>
+                <p>Clear exams with full solutions.</p>
+
+                <div class="product-action">
+                    <span class="price">15 DH</span>
+
+                    <div class="buttons">
+                        <a href="#" class="view-btn" onclick="openPDF('pdf.pdf')">View</a>
+                        <a href="https://wa.me/212786353269" class="shop-btn">Order</a>
                     </div>
                 </div>
-
-                <div class="product-card">
-                    <h1 class="minimal-vip-title">achraf MATH-VIP</h1>
-                    <div class="product-info">
-                        <h3>3rd Year Regional Exams</h3>
-                        <p class="description">A brief description of the product here...</p>
-                    </div>
-                    <div class="product-action">
-                        <span class="price">15 DH</span>
-                        <a href="https://wa.me/212786353269" class="shop-btn">Order via
-                            WhatsApp</a>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <h1 class="minimal-vip-title">achraf MATH-VIP</h1>
-                    <div class="product-info">
-                        <h3>3rd Year Regional Exams</h3>
-                        <p class="description">A brief description of the product here...</p>
-                    </div>
-                    <div class="product-action">
-                        <span class="price">15 DH</span>
-                        <a href="https://wa.me/212786353269" class="shop-btn">Order via
-                            WhatsApp</a>
-                    </div>
-                </div>
-
             </div>
+
         </div>
     </section>
 
-    <section id="bac-shop" class="shop-section">
-        <div class="container">
-            <h2 class="section-title">Baccalaureate Exams</h2>
+    <!-- PDF MODAL -->
+    <div id="pdfModal" class="pdf-modal">
+        <div class="pdf-content">
 
-            <div class="products-grid">
+            <span class="close-btn">&times;</span>
 
-                <div class="product-card">
-                    <h1 class="minimal-vip-title">achraf MATH-VIP</h1>
-                    <div class="product-info">
-                        <h3>Baccalaureate - Mathematics</h3>
-                        <p class="description">Comprehensive collection of National Exams for Math with detailed
-                            solutions.</p>
-                    </div>
-                    <div class="product-action">
-                        <span class="price">25 DH</span>
-                        <a href="https://wa.me/212786353269" class="shop-btn">Order
-                            via WhatsApp</a>
-                    </div>
-                </div>
+            <iframe id="pdfViewer"></iframe>
 
-                <div class="product-card">
-                    <h1 class="minimal-vip-title">achraf MATH-VIP</h1>
-                    <div class="product-info">
-                        <h3>Baccalaureate - math</h3>
-                        <p class="description">Selected National Exams for Physics & Chemistry to boost your grades.</p>
-                    </div>
-                    <div class="product-action">
-                        <span class="price">25 DH</span>
-                        <a href="https://wa.me/212786353269" class="shop-btn">Order via WhatsApp</a>
-                    </div>
-                </div>
-
-            </div>
         </div>
-    </section>
+    </div>
+
+    <!-- JS -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+
+            function openPDF(pdfPath) {
+                document.getElementById("pdfModal").style.display = "block";
+                document.getElementById("pdfViewer").src = pdfPath;
+            }
+
+            window.openPDF = openPDF;
+
+            const closeBtn = document.querySelector(".close-btn");
+            const modal = document.getElementById("pdfModal");
+            const viewer = document.getElementById("pdfViewer");
+
+            closeBtn.addEventListener("click", function () {
+                modal.style.display = "none";
+                viewer.src = "";
+            });
+
+            window.addEventListener("click", function (event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                    viewer.src = "";
+                }
+            });
+
+        });
+    </script>
+
 </body>
 
 </html>
